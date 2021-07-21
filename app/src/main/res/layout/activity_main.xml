@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_blue_light"
+    tools:ignore="MissingClass">
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_email"
+        android:layout_margin="10dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_launcher_foreground"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:hint="введите email"
+        android:drawablePadding="5dp"
+        android:backgroundTint="#0000"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:background="@drawable/stile_imput"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:drawableStart="@drawable/ic_baseline_lock_24"
+        android:background="@drawable/stile_imput"
+        android:backgroundTint="#0000"
+        android:drawablePadding="5dp"
+        android:textColor="@color/white"
+        android:hint="пароль"
+        android:layout_margin="22dp"
+        app:layout_constraintLeft_toLeftOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <CheckBox
+        android:id="@+id/remember"
+        android:text="Remember me"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/et_password"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/forget_password"
+        app:layout_constraintLeft_toRightOf="@+id/remember"
+        app:layout_constraintBottom_toTopOf="@+id/login"
+        android:text="Forget Password"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/login"
+        android:text="Log In"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/remember"
+        android:background="@drawable/button"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login"
+        android:background="@drawable/stile_imput"
+        android:backgroundTint="#AARRGGBB"
+        android:layout_width="350dp"
+        android:text="Sing Up"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
